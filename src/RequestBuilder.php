@@ -171,7 +171,7 @@ class RequestBuilder
         $headers = [];
         $headers['Content-Length'] = $this->soapMessage->getSize();
         $headers['SOAPAction'] = $this->soapAction;
-        $headers['Content-Type'] = 'text/xml; charset="utf-8"';
+        $headers['Content-Type'] = 'text/xml; charset=utf-8'; // Fix strict soap header 
         return $headers;
     }
 
